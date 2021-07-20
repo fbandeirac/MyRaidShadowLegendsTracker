@@ -1,0 +1,2 @@
+rootProject.name = "My Raid Shadow Legends Tracker"
+include ':app'

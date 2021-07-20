@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_champions">
+
+    <fragment
+        android:id="@+id/nav_champions"
+        android:name="dev.stoneworks.myraidshadowlegendstracker.ui.champion.ChampionFragment"
+        android:label="@string/menu_champions"
+        tools:layout="@layout/fragment_champion" />
+
+    <fragment
+        android:id="@+id/nav_equipment"
+        android:name="dev.stoneworks.myraidshadowlegendstracker.ui.equipment.EquipmentFragment"
+        android:label="@string/menu_equipment"
+        tools:layout="@layout/fragment_equipment" />
+
+    <fragment
+        android:id="@+id/nav_greathall"
+        android:name="dev.stoneworks.myraidshadowlegendstracker.ui.greathall.GreatHallFragment"
+        android:label="@string/menu_greatHall"
+        tools:layout="@layout/fragment_greathall" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="dev.stoneworks.myraidshadowlegendstracker.ui.greathall.GreatHallFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="dev.stoneworks.myraidshadowlegendstracker.ui.greathall.GreatHallFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

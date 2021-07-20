@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Raid Shadow Legends Tracker</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">My Raid: Shadow Legends Tracker</string>
+    <string name="nav_header_subtitle">Keep track of your champions and skills</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_bright_dark_mode">Bright/Dark mode</string>
+
+    <string name="menu_champions">My Champions</string>
+    <string name="menu_equipment">My Equipment</string>
+    <string name="menu_greatHall">My Great Hall</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_about">About</string>
+
+    <string name="text_equipment">Texto do equipamento</string>
+    <string name="text_greathall">Texto do Great Hall</string>
+    <string name="text_champion">Texto dos champinhoes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
