@@ -1,5 +1,6 @@
 package dev.stoneworks.myraidshadowlegendstracker;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -18,6 +19,7 @@ import dev.stoneworks.myraidshadowlegendstracker.databinding.ActivityMainBinding
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String PREFERENCE_FILE = "PrefFileMRSLT";
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
@@ -27,6 +29,24 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        try {
+            //Create Database
+            SQLiteDatabase dataBase = openOrCreateDatabase("SW_MyRSLT", MODE_PRIVATE, null);
+
+            //Create Table
+            dataBase.execSQL("CREATE TABLE IF NOT EXISTS champions (id INT, name VARCHAR, faction VARCHAR, rarity VARCHAR, role VARCHAR, affinity VARCHAR, usability VARCHAR)");
+
+            //Insert Info
+            dataBase.execSQL("INSERT INTO champions (id, name, faction, rarity, role, affinity, usability) VALUES (1, 'Lordly Legionary', 'Banner Lords', 'Epic', 'Attack', 'Magic', 'Situational')");
+            dataBase.execSQL("INSERT INTO champions (id, name, faction, rarity, role, affinity, usability) VALUES (2, 'Eu', 'Reu Lords', 'Feu', 'Creu', 'Pau', 'HUe')");
+
+            //Retrieve Info
+            dataBase.rawQuery()
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         setSupportActionBar(binding.appBarMain.toolbar);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override

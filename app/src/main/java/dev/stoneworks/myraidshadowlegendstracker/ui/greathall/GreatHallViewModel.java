@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 public class GreatHallViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private final MutableLiveData<String> mText;
 
     public GreatHallViewModel() {
         mText = new MutableLiveData<>();
